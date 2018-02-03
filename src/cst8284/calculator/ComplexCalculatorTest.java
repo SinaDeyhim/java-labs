@@ -1,11 +1,12 @@
 package cst8284.calculator;
 import java.util.Scanner;
-import java.lang.Math;
+
 
 public class ComplexCalculatorTest {
 	
    private static Scanner input = new Scanner(System.in);
    private static int choice = 0;
+   private static int counter = 0;
    private static ComplexCalculator calc;
    
    //Code execution starts here
@@ -20,7 +21,9 @@ public class ComplexCalculatorTest {
          System.out.println("The result is: " + calc.toString());  // output the result
          System.out.println ("Do you wish to continue? Enter Q to quit or anything else to continue");
          if (input.next().charAt(0)=='Q') break;              // press 'Q' to quit, otherwise loop
+         
       }
+     
    }
    
    // Static method requests and returns a complex number from user
@@ -28,8 +31,8 @@ public class ComplexCalculatorTest {
 	   
    	   choice = ComplexCalculatorTest.displayTypeInputMenu();
    	   input.nextLine();
-       System.out.print("Enter a complex number ");  // Bonus B code replaces this line (one line ONLY)
-       
+       System.out.printf("Enter the %s complex number ", counter%2==0 ? "first":"second");  // Bonus B code replaces this line (one line ONLY)
+       counter+=1;
        switch(choice){
        
           case 1:								      //Single string input
@@ -63,5 +66,6 @@ public class ComplexCalculatorTest {
         "3. Two integer values\n");
       return(input.nextInt());
    }
+  
    
 }

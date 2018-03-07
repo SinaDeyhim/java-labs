@@ -77,7 +77,7 @@ public class Complex {
 		return getReal()+sign+getImag()+"i";
 	}
 	
-	
+	// bonus A to check and see if both real and imag are zero
 		public boolean isZero() {
 			return 0==getImag() && 0==getReal();
 		}

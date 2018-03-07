@@ -31,8 +31,8 @@ public class ComplexCalculatorTest {
 	   
    	   choice = ComplexCalculatorTest.displayTypeInputMenu();
    	   input.nextLine();
-       System.out.printf("Enter the %s complex number ", counter%2==0 ? "first":"second");  // Bonus B code replaces this line (one line ONLY)
-       counter+=1;
+   	   //counter will be an even number for all the first complex numbers 
+       System.out.printf("Enter the %s complex number ", counter++%2==0 ? "first":"second");  // Bonus B code replaces this line (one line ONLY)
        switch(choice){
        
           case 1:								      //Single string input

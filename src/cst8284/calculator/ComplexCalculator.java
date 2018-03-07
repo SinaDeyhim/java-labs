@@ -1,5 +1,6 @@
 package cst8284.calculator;
-import java.lang.Math;
+// importing math for the first divide method, but it is commented as the bonus methods is used 
+// import java.lang.Math;
 
 public class ComplexCalculator {
 
@@ -67,10 +68,7 @@ public class ComplexCalculator {
 
 	}*/ 
 
-	// If attempting Bonus C, comment out the above divide() method, which must use
-	// the calculation given in the Lab 03 document--this must be included for marks--and
-	// add a new divide() method here that employs the complex conjugate in the Complex
-	// class, as described in the BONUS MARKS section of the Lab 3 document.
+
 	public Complex divide(Complex c1, Complex c2){
 		double conj=multiply(c2, c2.conjugate()).getReal();
 		if (multiply(c2, c2.conjugate()).isZero()) {
